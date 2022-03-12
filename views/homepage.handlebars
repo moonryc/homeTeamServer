@@ -1,0 +1,21 @@
+<div class="flex-container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th><abbr title="Player">Player</abbr></th>
+            <th class="text-center"><abbr title="Number of Searches">Searches</abbr></th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <th><abbr title="Player">Player</abbr></th>
+            <th class="text-center"><abbr title="Number of Searches">Searches</abbr></th>
+        </tr>
+        </tfoot>
+        <tbody>
+        {{#each results as |search|}}
+            {{> player search}}
+        {{/each}}
+        </tbody>
+    </table>
+</div>
