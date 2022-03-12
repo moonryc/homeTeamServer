@@ -10,7 +10,7 @@ const addPlayerRouter = express.Router()
 addPlayerRouter.get('/:player_search', async (req, res) => {
 
     try {
-        const search = req.params.player_search.replace('%20', ' ')
+        const search = req.params.player_search.replace('%20', ' ').trim().toLowerCase()
 
         const document = await Search.create({
             search: search
